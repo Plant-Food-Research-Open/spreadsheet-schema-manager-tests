@@ -52,6 +52,21 @@ leakage, but it means:
 Tests run in Jenkins (see `Jenkinsfile`) against the Microsoft Playwright Docker image, triggered
 from the app's own UAT deployment pipeline.
 
+## Contributing
+
+Contributions are welcome. If you are planning a change, please open an issue or discussion first
+so the intended approach and scope are clear.
+
+When updating tests, fixtures, or environment assumptions, also update the relevant README and test
+documentation so the suite remains reliable and easy to operate.
+
 ## License
 
 Licensed under the Apache License, Version 2.0 — see [LICENSE](LICENSE) and [NOTICE](NOTICE) for details.
+
+## Funding
+
+Funded by the New Zealand Ministry of Business, Innovation and Employment Strategic Science
+Investment Fund (contract number C11X1702) as part of the Digital Horticulture Systems Ngā Pou
+Rangahau, a Growing Futures™ programme at The New Zealand Institute for Bioeconomy Science
+Limited (Bioeconomy Science Institute).
