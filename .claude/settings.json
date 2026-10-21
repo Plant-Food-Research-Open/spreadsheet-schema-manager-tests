@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c *)",
+      "Bash(playwright-cli *)",
+      "Bash(curl *)",
+      "Bash(source /home/ubuntu/.venv/bin/activate)",
+      "Bash(export PLAYWRIGHT_MCP_IGNORE_HTTPS_ERRORS=true)"
+    ]
+  }
+}
