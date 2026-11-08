@@ -25,8 +25,12 @@ pytest -m regression                # full regression suite
 pytest tests/e2e/test_fields.py     # a single file
 ```
 
-By default, tests run against the UAT environment configured in `tests/conftest.py`'s
-`base_url` fixture.
+Set `BASE_URL` (environment variable, or in a `.env` file) to the app under test; it defaults
+to `http://localhost:8000`:
+
+```bash
+BASE_URL=https://ssm-uat.example.com pytest -m smoke
+```
 
 ## Structure
 
@@ -49,8 +53,9 @@ leakage, but it means:
 
 ## CI
 
-Tests run in Jenkins (see `Jenkinsfile`) against the Microsoft Playwright Docker image, triggered
-from the app's own UAT deployment pipeline.
+Tests run in Jenkins (see `Jenkinsfile`) against the Microsoft Playwright Docker image. The job
+takes a required `BASE_URL` parameter (plus `PYTEST_MARKERS`), and is typically triggered from the
+app's UAT build pipeline, which passes the UAT URL.
 
 ## Contributing
 

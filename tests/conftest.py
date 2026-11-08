@@ -21,7 +21,7 @@ load_dotenv()
 
 @pytest.fixture(scope="session")
 def base_url():
-    return os.getenv("BASE_URL", "https://spreadsheet-schema-manager.uat.k8s.pfr.co.nz")
+    return os.getenv("BASE_URL") or "http://localhost:8000"
 
 
 @pytest.fixture(
